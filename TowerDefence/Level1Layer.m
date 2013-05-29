@@ -49,18 +49,20 @@
         
         self.linePositions = [_tieldMapUtil linePositionArray:linePoints];
         
-//        [self schedule:@selector(createEnemy) interval:1.0f repeat:10 delay:1];
-        
-        Enemy *enemy = [Enemy nodeWithLinePositions:self.linePositions];
-        [self addChild:enemy];
+        [self schedule:@selector(produceEnemy) interval:1.0f repeat:10 delay:1];
         
         self.isTouchEnabled = YES;
     }
     return self;
 }
 
-- (void)createEnemy {
-    CCLOG(@"createEnemy::");
+- (void)produceEnemy {
+    Enemy *enemy = [Enemy nodeWithLinePositions:self.linePositions];
+    [self addChild:enemy];
+}
+
+- (void)onExit {
+    [self unschedule:@selector(produceEnemy)];
 }
 
 - (void)dealloc {

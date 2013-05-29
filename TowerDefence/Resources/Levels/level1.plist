@@ -14,21 +14,51 @@
 	<array>
 		<dict>
 			<key>x</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>y</key>
-			<integer>0</integer>
+			<integer>-1</integer>
 		</dict>
 		<dict>
 			<key>x</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>y</key>
-			<integer>0</integer>
+			<integer>8</integer>
 		</dict>
 		<dict>
 			<key>x</key>
-			<integer>0</integer>
+			<integer>5</integer>
 			<key>y</key>
-			<integer>0</integer>
+			<integer>8</integer>
+		</dict>
+		<dict>
+			<key>x</key>
+			<integer>5</integer>
+			<key>y</key>
+			<integer>5</integer>
+		</dict>
+		<dict>
+			<key>x</key>
+			<integer>9</integer>
+			<key>y</key>
+			<integer>5</integer>
+		</dict>
+		<dict>
+			<key>x</key>
+			<integer>9</integer>
+			<key>y</key>
+			<integer>8</integer>
+		</dict>
+		<dict>
+			<key>x</key>
+			<integer>13</integer>
+			<key>y</key>
+			<integer>8</integer>
+		</dict>
+		<dict>
+			<key>x</key>
+			<integer>13</integer>
+			<key>y</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 </dict>

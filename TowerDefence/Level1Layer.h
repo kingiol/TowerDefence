@@ -14,6 +14,7 @@
 }
 
 @property (nonatomic, unsafe_unretained) int level;
+@property (nonatomic, strong) CCTMXTiledMap *tmxTiledMap;
 
 + (CCScene *)scene;
 

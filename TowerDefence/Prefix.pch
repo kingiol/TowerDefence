@@ -11,8 +11,13 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+
+#import "cocos2d.h"
 #endif
 
 #define FONT_ARIAL @"Arial.fnt"
 #define winSizeWidth [CCDirector sharedDirector].winSize.width
 #define winSizeHeight [CCDirector sharedDirector].winSize.height
+#define IS_HD ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 2.0f)
+#define TILE_HEIGHT 32
+#define TILE_HEIGHT_HD 64

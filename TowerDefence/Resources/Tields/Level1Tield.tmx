@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="15" height="10" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="TileLayer_background" tilewidth="32" tileheight="32">
+  <image source="TileLayer_background.png" width="1024" height="1024"/>
+  <tile id="0">
+   <properties>
+    <property name="canBuild" value="false"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Background" width="15" height="10">
+  <data encoding="base64" compression="zlib">
+   eJyVUVsOwCAIw91EjsbNNi86PjRpaqfuowHk0TYWM4tESXiPp/C+eycegQY3R7wgj0OeSvNus+YqavQTxPvHa4gcbzG4j5pZk5pd8e5q5VFpZB0rD19/ovrj7QUV7xTW
+  </data>
+ </layer>
+ <layer name="Meta" width="15" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgYGSAABhNLGAkEjOg0aTaR4wZ+NRg00OKX9HNwWYPPv+iq8NnFiF7CfFxhREudxLjB2wAVxjCxABPgABE
+  </data>
+ </layer>
+</map>

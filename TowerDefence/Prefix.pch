@@ -12,3 +12,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #endif
+
+#define FONT_ARIAL @"Arial.fnt"
+#define winSizeWidth [CCDirector sharedDirector].winSize.width
+#define winSizeHeight [CCDirector sharedDirector].winSize.height

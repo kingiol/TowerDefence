@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		628A866B1755F1EE001C9823 /* level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 628A86691755F1EE001C9823 /* level2.plist */; };
+		628A866C1755F1EE001C9823 /* level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 628A866A1755F1EE001C9823 /* level3.plist */; };
+		628A866F1755F5A6001C9823 /* Level1Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 628A866E1755F5A6001C9823 /* Level1Layer.m */; };
+		628A86721755F5B1001C9823 /* Level2Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 628A86711755F5B1001C9823 /* Level2Layer.m */; };
+		628A86751755F5BE001C9823 /* Level3Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 628A86741755F5BE001C9823 /* Level3Layer.m */; };
 		62C5D0561755D7820087F590 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C5D0551755D7820087F590 /* QuartzCore.framework */; };
 		62C5D0581755D7820087F590 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C5D0571755D7820087F590 /* OpenGLES.framework */; };
 		62C5D05A1755D7820087F590 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C5D0591755D7820087F590 /* OpenAL.framework */; };
@@ -147,6 +152,9 @@
 		62C5D3741755DF9E0087F590 /* StageMap.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D3671755DF9E0087F590 /* StageMap.tmx */; };
 		62C5D3751755DF9E0087F590 /* TileLayer_background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D3681755DF9E0087F590 /* TileLayer_background-hd.png */; };
 		62C5D3761755DF9E0087F590 /* TileLayer_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D3691755DF9E0087F590 /* TileLayer_background.png */; };
+		62C5D37C1755E18D0087F590 /* index-background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D37A1755E18D0087F590 /* index-background-hd.png */; };
+		62C5D37D1755E18D0087F590 /* index-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D37B1755E18D0087F590 /* index-background.png */; };
+		62C5D37F1755E1B70087F590 /* level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D37E1755E1B70087F590 /* level1.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -162,6 +170,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		628A86691755F1EE001C9823 /* level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level2.plist; sourceTree = "<group>"; };
+		628A866A1755F1EE001C9823 /* level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level3.plist; sourceTree = "<group>"; };
+		628A866D1755F5A6001C9823 /* Level1Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level1Layer.h; sourceTree = "<group>"; };
+		628A866E1755F5A6001C9823 /* Level1Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level1Layer.m; sourceTree = "<group>"; };
+		628A86701755F5B1001C9823 /* Level2Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level2Layer.h; sourceTree = "<group>"; };
+		628A86711755F5B1001C9823 /* Level2Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level2Layer.m; sourceTree = "<group>"; };
+		628A86731755F5BE001C9823 /* Level3Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level3Layer.h; sourceTree = "<group>"; };
+		628A86741755F5BE001C9823 /* Level3Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level3Layer.m; sourceTree = "<group>"; };
 		62C5D0511755D7820087F590 /* TowerDefence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TowerDefence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62C5D0551755D7820087F590 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		62C5D0571755D7820087F590 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -439,6 +455,9 @@
 		62C5D3671755DF9E0087F590 /* StageMap.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = StageMap.tmx; sourceTree = "<group>"; };
 		62C5D3681755DF9E0087F590 /* TileLayer_background-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TileLayer_background-hd.png"; sourceTree = "<group>"; };
 		62C5D3691755DF9E0087F590 /* TileLayer_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TileLayer_background.png; sourceTree = "<group>"; };
+		62C5D37A1755E18D0087F590 /* index-background-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index-background-hd.png"; sourceTree = "<group>"; };
+		62C5D37B1755E18D0087F590 /* index-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index-background.png"; sourceTree = "<group>"; };
+		62C5D37E1755E1B70087F590 /* level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level1.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -514,6 +533,12 @@
 				62C5D1E31755D78E0087F590 /* HelloWorldLayer.m */,
 				62C5D1E51755D78E0087F590 /* IntroLayer.h */,
 				62C5D1E61755D78E0087F590 /* IntroLayer.m */,
+				628A866D1755F5A6001C9823 /* Level1Layer.h */,
+				628A866E1755F5A6001C9823 /* Level1Layer.m */,
+				628A86701755F5B1001C9823 /* Level2Layer.h */,
+				628A86711755F5B1001C9823 /* Level2Layer.m */,
+				628A86731755F5BE001C9823 /* Level3Layer.h */,
+				628A86741755F5BE001C9823 /* Level3Layer.m */,
 				62C5D0681755D7820087F590 /* Resources */,
 				62C5D1DB1755D78E0087F590 /* Supporting Files */,
 			);
@@ -523,6 +548,8 @@
 		62C5D0681755D7820087F590 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				62C5D3781755E18D0087F590 /* Levels */,
+				62C5D3791755E18D0087F590 /* UI */,
 				62C5D35A1755DF9E0087F590 /* Fonts */,
 				62C5D35F1755DF9E0087F590 /* Sounds */,
 				62C5D3651755DF9E0087F590 /* Tields */,
@@ -941,6 +968,27 @@
 			path = Resources/Tields;
 			sourceTree = "<group>";
 		};
+		62C5D3781755E18D0087F590 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				62C5D37E1755E1B70087F590 /* level1.plist */,
+				628A86691755F1EE001C9823 /* level2.plist */,
+				628A866A1755F1EE001C9823 /* level3.plist */,
+			);
+			name = Levels;
+			path = Resources/Levels;
+			sourceTree = "<group>";
+		};
+		62C5D3791755E18D0087F590 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				62C5D37A1755E18D0087F590 /* index-background-hd.png */,
+				62C5D37B1755E18D0087F590 /* index-background.png */,
+			);
+			name = UI;
+			path = Resources/UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1034,6 +1082,11 @@
 				62C5D3741755DF9E0087F590 /* StageMap.tmx in Resources */,
 				62C5D3751755DF9E0087F590 /* TileLayer_background-hd.png in Resources */,
 				62C5D3761755DF9E0087F590 /* TileLayer_background.png in Resources */,
+				62C5D37C1755E18D0087F590 /* index-background-hd.png in Resources */,
+				62C5D37D1755E18D0087F590 /* index-background.png in Resources */,
+				62C5D37F1755E1B70087F590 /* level1.plist in Resources */,
+				628A866B1755F1EE001C9823 /* level2.plist in Resources */,
+				628A866C1755F1EE001C9823 /* level3.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1048,6 +1101,9 @@
 				62C5D1E11755D78E0087F590 /* AppDelegate.m in Sources */,
 				62C5D1E41755D78E0087F590 /* HelloWorldLayer.m in Sources */,
 				62C5D1E71755D78E0087F590 /* IntroLayer.m in Sources */,
+				628A866F1755F5A6001C9823 /* Level1Layer.m in Sources */,
+				628A86721755F5B1001C9823 /* Level2Layer.m in Sources */,
+				628A86751755F5BE001C9823 /* Level3Layer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1210,6 +1266,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TowerDefence/Prefix.pch;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				HEADER_SEARCH_PATHS = "\"TowerDefence/libs/kazmath/include\"";
 				INFOPLIST_FILE = TowerDefence/Resources/Info.plist;
 				OTHER_LDFLAGS = (
@@ -1229,6 +1286,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TowerDefence/Prefix.pch;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				HEADER_SEARCH_PATHS = "\"TowerDefence/libs/kazmath/include\"";
 				INFOPLIST_FILE = TowerDefence/Resources/Info.plist;
 				OTHER_LDFLAGS = (

@@ -134,6 +134,19 @@
 		62C5D3531755D9A70087F590 /* vec3.c in Sources */ = {isa = PBXBuildFile; fileRef = 62C5D2EC1755D9A70087F590 /* vec3.c */; };
 		62C5D3541755D9A70087F590 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 62C5D2ED1755D9A70087F590 /* vec4.c */; };
 		62C5D3551755D9B20087F590 /* libCocos2d-Library.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C5D1F11755D97C0087F590 /* libCocos2d-Library.a */; };
+		62C5D36A1755DF9E0087F590 /* Arial-hd.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D35B1755DF9E0087F590 /* Arial-hd.fnt */; };
+		62C5D36B1755DF9E0087F590 /* Arial-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D35C1755DF9E0087F590 /* Arial-hd.png */; };
+		62C5D36C1755DF9E0087F590 /* Arial.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D35D1755DF9E0087F590 /* Arial.fnt */; };
+		62C5D36D1755DF9E0087F590 /* Arial.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D35E1755DF9E0087F590 /* Arial.png */; };
+		62C5D36E1755DF9E0087F590 /* background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D3601755DF9E0087F590 /* background.caf */; };
+		62C5D36F1755DF9E0087F590 /* killed.caf in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D3611755DF9E0087F590 /* killed.caf */; };
+		62C5D3701755DF9E0087F590 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D3621755DF9E0087F590 /* lose.wav */; };
+		62C5D3711755DF9E0087F590 /* shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D3631755DF9E0087F590 /* shoot.wav */; };
+		62C5D3721755DF9E0087F590 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D3641755DF9E0087F590 /* win.wav */; };
+		62C5D3731755DF9E0087F590 /* StageMap-hd.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D3661755DF9E0087F590 /* StageMap-hd.tmx */; };
+		62C5D3741755DF9E0087F590 /* StageMap.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D3671755DF9E0087F590 /* StageMap.tmx */; };
+		62C5D3751755DF9E0087F590 /* TileLayer_background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D3681755DF9E0087F590 /* TileLayer_background-hd.png */; };
+		62C5D3761755DF9E0087F590 /* TileLayer_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D3691755DF9E0087F590 /* TileLayer_background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -413,6 +426,19 @@
 		62C5D2EE1755D9A70087F590 /* LICENSE_cocos2d.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_cocos2d.txt; sourceTree = "<group>"; };
 		62C5D2EF1755D9A70087F590 /* LICENSE_CocosDenshion.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_CocosDenshion.txt; sourceTree = "<group>"; };
 		62C5D2F01755D9A70087F590 /* LICENSE_Kazmath.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_Kazmath.txt; sourceTree = "<group>"; };
+		62C5D35B1755DF9E0087F590 /* Arial-hd.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Arial-hd.fnt"; sourceTree = "<group>"; };
+		62C5D35C1755DF9E0087F590 /* Arial-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arial-hd.png"; sourceTree = "<group>"; };
+		62C5D35D1755DF9E0087F590 /* Arial.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Arial.fnt; sourceTree = "<group>"; };
+		62C5D35E1755DF9E0087F590 /* Arial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arial.png; sourceTree = "<group>"; };
+		62C5D3601755DF9E0087F590 /* background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.caf; sourceTree = "<group>"; };
+		62C5D3611755DF9E0087F590 /* killed.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = killed.caf; sourceTree = "<group>"; };
+		62C5D3621755DF9E0087F590 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose.wav; sourceTree = "<group>"; };
+		62C5D3631755DF9E0087F590 /* shoot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shoot.wav; sourceTree = "<group>"; };
+		62C5D3641755DF9E0087F590 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
+		62C5D3661755DF9E0087F590 /* StageMap-hd.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "StageMap-hd.tmx"; sourceTree = "<group>"; };
+		62C5D3671755DF9E0087F590 /* StageMap.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = StageMap.tmx; sourceTree = "<group>"; };
+		62C5D3681755DF9E0087F590 /* TileLayer_background-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TileLayer_background-hd.png"; sourceTree = "<group>"; };
+		62C5D3691755DF9E0087F590 /* TileLayer_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TileLayer_background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -497,6 +523,9 @@
 		62C5D0681755D7820087F590 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				62C5D35A1755DF9E0087F590 /* Fonts */,
+				62C5D35F1755DF9E0087F590 /* Sounds */,
+				62C5D3651755DF9E0087F590 /* Tields */,
 				62C5D0691755D7820087F590 /* Default.png */,
 				62C5D06B1755D7820087F590 /* Default-Landscape~ipad.png */,
 				62C5D06D1755D7820087F590 /* fps_images.png */,
@@ -875,6 +904,43 @@
 			path = GL;
 			sourceTree = "<group>";
 		};
+		62C5D35A1755DF9E0087F590 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				62C5D35B1755DF9E0087F590 /* Arial-hd.fnt */,
+				62C5D35C1755DF9E0087F590 /* Arial-hd.png */,
+				62C5D35D1755DF9E0087F590 /* Arial.fnt */,
+				62C5D35E1755DF9E0087F590 /* Arial.png */,
+			);
+			name = Fonts;
+			path = Resources/Fonts;
+			sourceTree = "<group>";
+		};
+		62C5D35F1755DF9E0087F590 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				62C5D3601755DF9E0087F590 /* background.caf */,
+				62C5D3611755DF9E0087F590 /* killed.caf */,
+				62C5D3621755DF9E0087F590 /* lose.wav */,
+				62C5D3631755DF9E0087F590 /* shoot.wav */,
+				62C5D3641755DF9E0087F590 /* win.wav */,
+			);
+			name = Sounds;
+			path = Resources/Sounds;
+			sourceTree = "<group>";
+		};
+		62C5D3651755DF9E0087F590 /* Tields */ = {
+			isa = PBXGroup;
+			children = (
+				62C5D3661755DF9E0087F590 /* StageMap-hd.tmx */,
+				62C5D3671755DF9E0087F590 /* StageMap.tmx */,
+				62C5D3681755DF9E0087F590 /* TileLayer_background-hd.png */,
+				62C5D3691755DF9E0087F590 /* TileLayer_background.png */,
+			);
+			name = Tields;
+			path = Resources/Tields;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -955,6 +1021,19 @@
 				62C5D07C1755D7820087F590 /* Icon.png in Resources */,
 				62C5D07E1755D7820087F590 /* Icon@2x.png in Resources */,
 				62C5D0811755D7820087F590 /* iTunesArtwork in Resources */,
+				62C5D36A1755DF9E0087F590 /* Arial-hd.fnt in Resources */,
+				62C5D36B1755DF9E0087F590 /* Arial-hd.png in Resources */,
+				62C5D36C1755DF9E0087F590 /* Arial.fnt in Resources */,
+				62C5D36D1755DF9E0087F590 /* Arial.png in Resources */,
+				62C5D36E1755DF9E0087F590 /* background.caf in Resources */,
+				62C5D36F1755DF9E0087F590 /* killed.caf in Resources */,
+				62C5D3701755DF9E0087F590 /* lose.wav in Resources */,
+				62C5D3711755DF9E0087F590 /* shoot.wav in Resources */,
+				62C5D3721755DF9E0087F590 /* win.wav in Resources */,
+				62C5D3731755DF9E0087F590 /* StageMap-hd.tmx in Resources */,
+				62C5D3741755DF9E0087F590 /* StageMap.tmx in Resources */,
+				62C5D3751755DF9E0087F590 /* TileLayer_background-hd.png in Resources */,
+				62C5D3761755DF9E0087F590 /* TileLayer_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1230,6 +1309,7 @@
 				62C5D1EC1755D78E0087F590 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62C5D1FA1755D97C0087F590 /* Build configuration list for PBXNativeTarget "Cocos2d-Library" */ = {
 			isa = XCConfigurationList;
@@ -1238,6 +1318,7 @@
 				62C5D1FC1755D97C0087F590 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

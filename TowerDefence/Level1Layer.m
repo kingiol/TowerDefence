@@ -10,6 +10,8 @@
 #import "TieldMapUtil.h"
 #import "LevelUtil.h"
 #import "Enemy.h"
+#import "HudLayer.h"
+#import "Tower.h"
 
 @interface Level1Layer () {
     CCTMXLayer *_backgroundLayer;
@@ -28,6 +30,8 @@
 @synthesize level = _level;
 @synthesize tmxTiledMap = _tmxTiledMap;
 @synthesize linePositions = _linePositions;
+
+@synthesize enemiesArray = _enemiesArray;
 
 + (CCScene *)scene {
     CCScene *scene = [CCScene node];
@@ -52,11 +56,26 @@
         
         NSArray *linePoints = [LevelUtil loadLinePositions:_level];
         self.linePositions = [_tieldMapUtil linePositionArray:linePoints];
+        
+        [self createEnemy];
+        
         [self schedule:@selector(produceEnemy) interval:1.0f repeat:10 delay:1];
         
         self.isTouchEnabled = YES;
+        
+        [self scheduleUpdate];
     }
     return self;
+}
+
+- (void)createEnemy {
+    self.enemiesArray = [NSMutableArray arrayWithCapacity:10];
+    for (int i = 0; i < 10; i++) {
+        Enemy *enemy = [Enemy nodeWithLinePositions:self.linePositions];
+        enemy.delegate = self;
+        [self addChild:enemy];
+        [self.enemiesArray addObject:enemy];
+    }
 }
 
 - (void)createMountain {
@@ -80,9 +99,12 @@
 }
 
 - (void)produceEnemy {
-    Enemy *enemy = [Enemy nodeWithLinePositions:self.linePositions];
-    enemy.delegate = self;
-    [self addChild:enemy];
+    for (Enemy *enemy in self.enemiesArray) {
+        if (!enemy.isActive) {
+            enemy.isActive = YES;
+            return;
+        }
+    }
 }
 
 - (void)onExit {
@@ -95,15 +117,53 @@
     _tieldMapUtil = nil;
 }
 
+- (void)update:(ccTime)delta {
+    int currentHp = [_mountainHpLabel.string intValue];
+    int enemyCount = self.enemiesArray.count;
+    if (currentHp <= 0) {
+        for (Enemy *enemy in self.enemiesArray) {
+            [enemy unscheduleUpdate];
+            
+            CCBlink *blink = [CCBlink actionWithDuration:5 blinks:30];
+            [enemy runAction:blink];
+        }
+        HudLayer *layer = [HudLayer nodeWithWon:NO currentLevel:_level];
+        [self addChild:layer z:100];
+        [self unscheduleUpdate];
+    }else if (enemyCount == 0 && currentHp > 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *levelPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"level%d", _level] ofType:@"plist"];
+            NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:levelPath];
+            if (dict) {
+                [dict setObject:[NSNumber numberWithBool:YES] forKey:@"passed"];
+                [dict writeToFile:levelPath atomically:YES];
+            }
+            NSString *nextLevelPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"level%d", _level + 1] ofType:@"plist"];
+            NSMutableDictionary *nextDict = [NSMutableDictionary dictionaryWithContentsOfFile:nextLevelPath];
+            if (nextDict) {
+                [nextDict setObject:[NSNumber numberWithBool:YES] forKey:@"isRun"];
+                [nextDict writeToFile:nextLevelPath atomically:YES];
+            }
+        });
+        HudLayer *layer = [HudLayer nodeWithWon:YES currentLevel:_level];
+        [self addChild:layer z:100];
+        [self unscheduleUpdate];
+    }
+}
+
 #pragma mark - LevelLayerDelegate
 
 - (void)updateMountainHP {
     int currentHp = [_mountainHpLabel.string intValue];
     _mountainHpLabel.string = [NSString stringWithFormat:@"%d", --currentHp];
-    if (currentHp <= 0) {
-        CCLOG(@"Game Over");
-    }
-    
+}
+
+- (NSMutableArray *)getEnemiesArray {
+    return self.enemiesArray;
+}
+
+- (void)addBullet:(CCSprite *)bullet {
+    [self addChild:bullet z:10];
 }
 
 #pragma mark - Touches
@@ -119,9 +179,10 @@
         [_metaLayer setTileGID:1 at:tileCoord];
         
         CGPoint position = [_tieldMapUtil positionForTileCoord:tileCoord];
-        CCSprite *tower = [CCSprite spriteWithFile:@"tower.png"];
+        
+        Tower *tower = [Tower nodeWithPosition:position];
+        tower.delegate = self;
         [self addChild:tower z:10];
-        tower.position = position;
     }
     
 }

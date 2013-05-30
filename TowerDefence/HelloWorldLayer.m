@@ -86,7 +86,7 @@
     NSInteger tag = item.tag;
     NSString *classStr = [NSString stringWithFormat:@"Level%dLayer", tag];
     CCScene *scene = [[NSClassFromString(classStr) class] scene];
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInR transitionWithDuration:1.0f scene:scene]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInR transitionWithDuration:0.5f scene:scene]];
 }
 
 @end

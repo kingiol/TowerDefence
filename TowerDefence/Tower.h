@@ -7,10 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "cocos2d.h"
+#import "Enemy.h"
+#import "LevelLayerDelegate.h"
 
 @interface Tower : CCNode {
     
 }
+
+@property (nonatomic, unsafe_unretained) int damageRange;
+@property (nonatomic, unsafe_unretained) int fireRate;
+@property (nonatomic, unsafe_unretained) int fireInterval;
+@property (nonatomic, unsafe_unretained) int bulletSpeed;
+@property (nonatomic, unsafe_unretained) BOOL isAttacking;
+@property (nonatomic, unsafe_unretained) Enemy *choosedEnemy;
+
+@property (nonatomic, unsafe_unretained) id<LevelLayerDelegate> delegate;
+
++ (id)nodeWithPosition:(CGPoint)position;
+- (id)initWithPosition:(CGPoint)position;
 
 @end

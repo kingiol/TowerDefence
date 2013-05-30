@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "LevelLayerDelegate.h"
 
+@class Tower;
+
 @interface Enemy : CCNode {
     
 }
@@ -22,9 +24,16 @@
 @property (nonatomic, strong) CCSprite *enemySprite;
 
 @property (nonatomic, unsafe_unretained) id<LevelLayerDelegate> delegate;
+@property (nonatomic, unsafe_unretained) BOOL isActive;
+
+@property (nonatomic, strong) NSMutableArray *attackedByArray;
 
 + (id)nodeWithLinePositions:(NSArray *)linePositions;
 
 - (id)initWithLinePositions:(NSArray *)linePositions;
+
+- (void)getDamaged:(int)damage;
+
+- (void)attackByTower:(Tower *)tower;
 
 @end

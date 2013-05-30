@@ -16,6 +16,8 @@
 @property (nonatomic, unsafe_unretained) int level;
 @property (nonatomic, strong) CCTMXTiledMap *tmxTiledMap;
 
+@property (nonatomic, strong) NSMutableArray *enemiesArray;
+
 + (CCScene *)scene;
 
 @end

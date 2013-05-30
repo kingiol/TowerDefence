@@ -12,5 +12,7 @@
 
 @required
 - (void)updateMountainHP;
+- (NSMutableArray *)getEnemiesArray;
+- (void)addBullet:(CCSprite *)bullet;
 
 @end

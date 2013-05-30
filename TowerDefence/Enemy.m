@@ -9,6 +9,8 @@
 #import "Enemy.h"
 #import "PointUtil.h"
 
+#import "Tower.h"
+
 @implementation Enemy
 
 @synthesize linePositionArray = _linePositionArray;
@@ -21,6 +23,10 @@
 
 @synthesize delegate = _delegate;
 
+@synthesize isActive = _isActive;
+
+@synthesize attackedByArray = _attackedByArray;
+
 + (id)nodeWithLinePositions:(NSArray *)linePositions {
     return [[self alloc] initWithLinePositions:linePositions];
 }
@@ -29,8 +35,11 @@
     if ((self = [super init])) {
         self.linePositionArray = [NSMutableArray arrayWithArray:linePositions];
         self.hp = 5;
-        self.current_hp = 0;
+        self.current_hp = 5;
         self.walkSpeed = 1;
+        self.isActive = NO;
+        
+        self.attackedByArray = [NSMutableArray array];
         
         CGPoint startPoint = CGPointFromString([self.linePositionArray objectAtIndex:0]);
         self.enemySprite = [CCSprite spriteWithFile:@"enemy.png"];
@@ -48,6 +57,11 @@
 }
 
 - (void)update:(ccTime)delta {
+    
+    if (!self.isActive) {
+        return;
+    }
+    
     CGPoint targetPoint = self.nextPosition;
     
     if ([PointUtil circle:self.currentPosition withRadius:1 collsionWithCircle:targetPoint collisionCircleRadius:1]) {
@@ -57,8 +71,7 @@
             targetPoint = self.nextPosition;
         }else {
             //achieve the gold, game hp - 1
-            [self.enemySprite removeFromParentAndCleanup:YES];
-            [self removeFromParentAndCleanup:YES];
+            [self deaded];
             // update gold number
             if ([self.delegate respondsToSelector:@selector(updateMountainHP)]) {
                 [self.delegate updateMountainHP];
@@ -71,6 +84,29 @@
     
     self.currentPosition = ccp(self.currentPosition.x + normalized.x * self.walkSpeed, self.currentPosition.y + normalized.y * self.walkSpeed);
     self.enemySprite.position = self.currentPosition;
+}
+
+- (void)getDamaged:(int)damage {
+    self.current_hp -= damage;
+    if (self.current_hp <= 0) {
+        for (Tower *tower in self.attackedByArray) {
+            tower.choosedEnemy = nil;
+        }
+        [self deaded];
+    }
+}
+
+- (void)deaded {
+    [[self.delegate getEnemiesArray] removeObject:self];
+    [self.enemySprite removeFromParentAndCleanup:YES];
+    [self removeFromParentAndCleanup:YES];
+}
+
+- (void)attackByTower:(Tower *)tower {
+    NSUInteger index = [self.attackedByArray indexOfObject:tower];
+    if (index == NSNotFound) {
+        [self.attackedByArray addObject:tower];
+    }
 }
 
 @end

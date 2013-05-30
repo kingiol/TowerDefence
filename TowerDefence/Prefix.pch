@@ -16,9 +16,17 @@
 #endif
 
 #define FONT_ARIAL @"Arial.fnt"
-#define FONT_RED @"font_red.fnt"
 #define winSizeWidth [CCDirector sharedDirector].winSize.width
 #define winSizeHeight [CCDirector sharedDirector].winSize.height
 #define IS_HD ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 2.0f)
 #define TILE_HEIGHT 32
 #define TILE_HEIGHT_HD 64
+
+// Return a random number [0.0, 1.0]
+#define RANDOM_FLOAT_INCLUDE() ((float)arc4random()/0xFFFFFFFF)
+// Return a random number [0, n)
+#define RANDOM_INT(n) (arc4random() % n)
+// Return a random number [0, n]
+#define RANDOM_INT_INCLUDE(n) (arc4random() % (n + 1))
+// Return a random number [n, m]
+#define RANDOM_INT_INCLUDE(n, m) ((arc4random() % (m - n + 1)) + n)

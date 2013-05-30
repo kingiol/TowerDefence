@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol LevelLayerProtocol <NSObject>
+@protocol LevelLayerDelegate <NSObject>
+
+@required
+- (void)updateMountainHP;
 
 @end

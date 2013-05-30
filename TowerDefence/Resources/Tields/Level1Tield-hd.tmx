@@ -5,9 +5,12 @@
  </tileset>
  <layer name="Background" width="15" height="10">
   <data encoding="base64" compression="zlib">
-   eJyVUVsOwCAIw91EjsbNNi86PjRpaqfuowHk0TYWM4tESXiPp/C+eycegQY3R7wgj0OeSvNus+YqavQTxPvHa4gcbzG4j5pZk5pd8e5q5VFpZB0rD19/ovrj7QUV7xTW
+   eJyVkVEOwCAIQ+Eo9mjczO2i40MT0lXdPl4UBEqjm1kknmCcX8Ho7ckluMtMUJ8X3RON6mHvnZuIq2aQ7h+vIe51FqM8Quiuane6p1h5VDvyHjsPqz9R7zP3ABQHFNU=
   </data>
  </layer>
+ <objectgroup name="MountainObject" width="15" height="10">
+  <object name="Mountain" x="832" y="64" width="64" height="64"/>
+ </objectgroup>
  <layer name="Meta" width="15" height="10">
   <data encoding="base64" compression="zlib">
    eJxjYGBgYGSAABhNLGAkEjOg0aTaR4wZ+NRg00OKX9HNwWYPPv+iq8NnFiF7CfFxhREudxLjB2wAVxjCxABPgABE

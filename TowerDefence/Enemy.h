@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "cocos2d.h"
+#import "LevelLayerDelegate.h"
 
 @interface Enemy : CCNode {
     
@@ -20,6 +20,8 @@
 @property (nonatomic, unsafe_unretained) int walkSpeed;
 @property (nonatomic, unsafe_unretained) int current_hp;
 @property (nonatomic, strong) CCSprite *enemySprite;
+
+@property (nonatomic, unsafe_unretained) id<LevelLayerDelegate> delegate;
 
 + (id)nodeWithLinePositions:(NSArray *)linePositions;
 

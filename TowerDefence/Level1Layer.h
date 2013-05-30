@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "cocos2d.h"
+#import "LevelLayerDelegate.h"
 
-@interface Level1Layer : CCLayer {
+@interface Level1Layer : CCLayer <LevelLayerDelegate> {
     
 }
 

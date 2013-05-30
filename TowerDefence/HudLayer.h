@@ -13,4 +13,7 @@
     
 }
 
++ (id)nodeWithWon:(BOOL)won currentLevel:(int)level;
+- (id)initWithWon:(BOOL)won currentLevel:(int)level;
+
 @end

@@ -18,6 +18,9 @@
 - (CGPoint)tileCoordForPosition:(CGPoint)position;
 - (CGPoint)positionForTileCoord:(CGPoint)tileCoord;
 
+- (int)spriteScale;
+- (int)getTieldHeightForRetina;
+
 - (NSArray *)linePositionArray:(NSArray *)tileCoordArray;
 
 @end

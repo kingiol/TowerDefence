@@ -39,6 +39,20 @@
     return ccp(x, y);
 }
 
+- (int)spriteScale {
+    if (IS_HD) {
+        return 2;
+    }
+    return 1;
+}
+
+- (int)getTieldHeightForRetina {
+    if (IS_HD) {
+        return TILE_HEIGHT_HD;
+    }
+    return TILE_HEIGHT;
+}
+
 - (NSArray *)linePositionArray:(NSArray *)tileCoordArray {
     
     NSMutableArray *array = [NSMutableArray array];

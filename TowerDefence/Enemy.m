@@ -19,6 +19,8 @@
 @synthesize current_hp = _current_hp;
 @synthesize enemySprite = _enemySprite;
 
+@synthesize delegate = _delegate;
+
 + (id)nodeWithLinePositions:(NSArray *)linePositions {
     return [[self alloc] initWithLinePositions:linePositions];
 }
@@ -57,6 +59,10 @@
             //achieve the gold, game hp - 1
             [self.enemySprite removeFromParentAndCleanup:YES];
             [self removeFromParentAndCleanup:YES];
+            // update gold number
+            if ([self.delegate respondsToSelector:@selector(updateMountainHP)]) {
+                [self.delegate updateMountainHP];
+            }
         }
     }
     

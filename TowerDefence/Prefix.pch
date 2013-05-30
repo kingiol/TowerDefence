@@ -27,6 +27,6 @@
 // Return a random number [0, n)
 #define RANDOM_INT(n) (arc4random() % n)
 // Return a random number [0, n]
-#define RANDOM_INT_INCLUDE(n) (arc4random() % (n + 1))
+#define RANDOM_INT_INC(n) (arc4random() % (n + 1))
 // Return a random number [n, m]
 #define RANDOM_INT_INCLUDE(n, m) ((arc4random() % (m - n + 1)) + n)

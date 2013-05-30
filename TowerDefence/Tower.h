@@ -20,6 +20,7 @@
 @property (nonatomic, unsafe_unretained) int bulletSpeed;
 @property (nonatomic, unsafe_unretained) BOOL isAttacking;
 @property (nonatomic, unsafe_unretained) Enemy *choosedEnemy;
+@property (nonatomic, unsafe_unretained) int cost;
 
 @property (nonatomic, unsafe_unretained) id<LevelLayerDelegate> delegate;
 

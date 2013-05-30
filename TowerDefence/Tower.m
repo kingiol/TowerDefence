@@ -26,6 +26,7 @@
 @synthesize bulletSpeed = _bulletSpeed;
 @synthesize isAttacking = _isAttacking;
 @synthesize choosedEnemy = _choosedEnemy;
+@synthesize cost = _cost;
 
 @synthesize delegate = _delegate;
 
@@ -41,6 +42,7 @@
         self.bulletSpeed = RANDOM_INT_INCLUDE(50, 60);
         self.isAttacking = NO;
         self.choosedEnemy = nil;
+        self.cost = 15;
         
         self.towerSprite = [CCSprite spriteWithFile:@"tower.png"];
         [self addChild:self.towerSprite];

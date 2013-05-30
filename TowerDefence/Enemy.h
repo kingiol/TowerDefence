@@ -22,6 +22,8 @@
 @property (nonatomic, unsafe_unretained) int walkSpeed;
 @property (nonatomic, unsafe_unretained) int current_hp;
 @property (nonatomic, strong) CCSprite *enemySprite;
+@property (nonatomic, unsafe_unretained) int worth;
+@property (nonatomic, unsafe_unretained) int score;
 
 @property (nonatomic, unsafe_unretained) id<LevelLayerDelegate> delegate;
 @property (nonatomic, unsafe_unretained) BOOL isActive;

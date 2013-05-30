@@ -12,6 +12,7 @@
 #import "Enemy.h"
 #import "HudLayer.h"
 #import "Tower.h"
+#import "StatusLayer.h"
 
 @interface Level1Layer () {
     CCTMXLayer *_backgroundLayer;
@@ -19,6 +20,8 @@
     TieldMapUtil *_tieldMapUtil;
     CCTMXObjectGroup *_objectGroup;
     CCLabelBMFont *_mountainHpLabel;
+    
+    StatusLayer *_statusLayer;
 }
 
 @property (nonatomic, strong) NSArray *linePositions;
@@ -53,6 +56,9 @@
         _metaLayer.visible = NO;
         _objectGroup = [_tmxTiledMap objectGroupNamed:@"MountainObject"];
         [self createMountain];
+        
+        _statusLayer = [StatusLayer nodeWithGold:30 score:0];
+        [self addChild:_statusLayer z:15];
         
         NSArray *linePoints = [LevelUtil loadLinePositions:_level];
         self.linePositions = [_tieldMapUtil linePositionArray:linePoints];
@@ -136,6 +142,8 @@
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:levelPath];
             if (dict) {
                 [dict setObject:[NSNumber numberWithBool:YES] forKey:@"passed"];
+                int score = _statusLayer.currentScore;
+                [dict setObject:[NSNumber numberWithInt:score] forKey:@"score"];
                 [dict writeToFile:levelPath atomically:YES];
             }
             NSString *nextLevelPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"level%d", _level + 1] ofType:@"plist"];
@@ -166,6 +174,11 @@
     [self addChild:bullet z:10];
 }
 
+- (void)updateStatusWithGold:(int)gold score:(int)score {
+    [_statusLayer updateGold:gold];
+    [_statusLayer updateScore:score];
+}
+
 #pragma mark - Touches
 
 - (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -181,8 +194,13 @@
         CGPoint position = [_tieldMapUtil positionForTileCoord:tileCoord];
         
         Tower *tower = [Tower nodeWithPosition:position];
-        tower.delegate = self;
-        [self addChild:tower z:10];
+        if (_statusLayer.currentGold - tower.cost >= 0) {
+            tower.delegate = self;
+            [self addChild:tower z:10];
+            [_statusLayer updateGold:-tower.cost];
+        }else {
+            tower = nil;
+        }
     }
     
 }

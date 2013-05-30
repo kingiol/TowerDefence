@@ -14,5 +14,6 @@
 - (void)updateMountainHP;
 - (NSMutableArray *)getEnemiesArray;
 - (void)addBullet:(CCSprite *)bullet;
+- (void)updateStatusWithGold:(int)gold score:(int)score;
 
 @end

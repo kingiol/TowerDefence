@@ -12,6 +12,8 @@
 		623A347C1756E0BD00E09F02 /* mountain-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 623A347A1756E0BD00E09F02 /* mountain-hd.png */; };
 		623A347D1756E0BD00E09F02 /* mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = 623A347B1756E0BD00E09F02 /* mountain.png */; };
 		623A34931756ED6900E09F02 /* HudLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 623A34921756ED6900E09F02 /* HudLayer.m */; };
+		627ABD75175746A9005113F3 /* icon_gold-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 627ABD73175746A9005113F3 /* icon_gold-hd.png */; };
+		627ABD76175746A9005113F3 /* icon_gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 627ABD74175746A9005113F3 /* icon_gold.png */; };
 		628A866B1755F1EE001C9823 /* level2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 628A86691755F1EE001C9823 /* level2.plist */; };
 		628A866C1755F1EE001C9823 /* level3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 628A866A1755F1EE001C9823 /* level3.plist */; };
 		628A866F1755F5A6001C9823 /* Level1Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 628A866E1755F5A6001C9823 /* Level1Layer.m */; };
@@ -169,6 +171,8 @@
 		62C5D37C1755E18D0087F590 /* index-background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D37A1755E18D0087F590 /* index-background-hd.png */; };
 		62C5D37D1755E18D0087F590 /* index-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D37B1755E18D0087F590 /* index-background.png */; };
 		62C5D37F1755E1B70087F590 /* level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62C5D37E1755E1B70087F590 /* level1.plist */; };
+		62F2CF161757435A00F02F70 /* LevelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F2CF151757435A00F02F70 /* LevelLayer.m */; };
+		62F2CF1A175743EC00F02F70 /* StatusLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F2CF19175743EC00F02F70 /* StatusLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -191,6 +195,8 @@
 		623A34901756EB1B00E09F02 /* LevelLayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelLayerDelegate.h; sourceTree = "<group>"; };
 		623A34911756ED6900E09F02 /* HudLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudLayer.h; sourceTree = "<group>"; };
 		623A34921756ED6900E09F02 /* HudLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudLayer.m; sourceTree = "<group>"; };
+		627ABD73175746A9005113F3 /* icon_gold-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_gold-hd.png"; sourceTree = "<group>"; };
+		627ABD74175746A9005113F3 /* icon_gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_gold.png; sourceTree = "<group>"; };
 		628A86691755F1EE001C9823 /* level2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level2.plist; sourceTree = "<group>"; };
 		628A866A1755F1EE001C9823 /* level3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level3.plist; sourceTree = "<group>"; };
 		628A866D1755F5A6001C9823 /* Level1Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level1Layer.h; sourceTree = "<group>"; };
@@ -493,6 +499,10 @@
 		62C5D37A1755E18D0087F590 /* index-background-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index-background-hd.png"; sourceTree = "<group>"; };
 		62C5D37B1755E18D0087F590 /* index-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index-background.png"; sourceTree = "<group>"; };
 		62C5D37E1755E1B70087F590 /* level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level1.plist; sourceTree = "<group>"; };
+		62F2CF141757435A00F02F70 /* LevelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelLayer.h; sourceTree = "<group>"; };
+		62F2CF151757435A00F02F70 /* LevelLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelLayer.m; sourceTree = "<group>"; };
+		62F2CF18175743EC00F02F70 /* StatusLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusLayer.h; sourceTree = "<group>"; };
+		62F2CF19175743EC00F02F70 /* StatusLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -591,6 +601,8 @@
 				62C5D1E31755D78E0087F590 /* HelloWorldLayer.m */,
 				62C5D1E51755D78E0087F590 /* IntroLayer.h */,
 				62C5D1E61755D78E0087F590 /* IntroLayer.m */,
+				62F2CF141757435A00F02F70 /* LevelLayer.h */,
+				62F2CF151757435A00F02F70 /* LevelLayer.m */,
 				628A866D1755F5A6001C9823 /* Level1Layer.h */,
 				628A866E1755F5A6001C9823 /* Level1Layer.m */,
 				628A86701755F5B1001C9823 /* Level2Layer.h */,
@@ -599,6 +611,8 @@
 				628A86741755F5BE001C9823 /* Level3Layer.m */,
 				623A34911756ED6900E09F02 /* HudLayer.h */,
 				623A34921756ED6900E09F02 /* HudLayer.m */,
+				62F2CF18175743EC00F02F70 /* StatusLayer.h */,
+				62F2CF19175743EC00F02F70 /* StatusLayer.m */,
 				62A94D1417563372008A04CB /* Tower.h */,
 				62A94D1517563372008A04CB /* Tower.m */,
 				62A94D171756359A008A04CB /* Enemy.h */,
@@ -1023,6 +1037,8 @@
 		62C5D3651755DF9E0087F590 /* Tields */ = {
 			isa = PBXGroup;
 			children = (
+				627ABD73175746A9005113F3 /* icon_gold-hd.png */,
+				627ABD74175746A9005113F3 /* icon_gold.png */,
 				621BCB65175708F0002E61FF /* bullet-hd.png */,
 				621BCB66175708F0002E61FF /* bullet.png */,
 				623A347A1756E0BD00E09F02 /* mountain-hd.png */,
@@ -1167,6 +1183,8 @@
 				623A347D1756E0BD00E09F02 /* mountain.png in Resources */,
 				621BCB67175708F0002E61FF /* bullet-hd.png in Resources */,
 				621BCB68175708F0002E61FF /* bullet.png in Resources */,
+				627ABD75175746A9005113F3 /* icon_gold-hd.png in Resources */,
+				627ABD76175746A9005113F3 /* icon_gold.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1190,6 +1208,8 @@
 				62A94D2017564491008A04CB /* LevelUtil.m in Sources */,
 				62A94D23175646C3008A04CB /* PointUtil.m in Sources */,
 				623A34931756ED6900E09F02 /* HudLayer.m in Sources */,
+				62F2CF161757435A00F02F70 /* LevelLayer.m in Sources */,
+				62F2CF1A175743EC00F02F70 /* StatusLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

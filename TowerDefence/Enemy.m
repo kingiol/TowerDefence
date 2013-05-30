@@ -20,6 +20,7 @@
 @synthesize walkSpeed = _walkSpeed;
 @synthesize current_hp = _current_hp;
 @synthesize enemySprite = _enemySprite;
+@synthesize worth = _worth;
 
 @synthesize delegate = _delegate;
 
@@ -38,6 +39,8 @@
         self.current_hp = 5;
         self.walkSpeed = 1;
         self.isActive = NO;
+        self.worth = 10;
+        self.score = 20;
         
         self.attackedByArray = [NSMutableArray array];
         
@@ -92,6 +95,7 @@
         for (Tower *tower in self.attackedByArray) {
             tower.choosedEnemy = nil;
         }
+        [self.delegate updateStatusWithGold:self.worth score:self.score];
         [self deaded];
     }
 }

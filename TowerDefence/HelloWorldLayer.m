@@ -13,6 +13,7 @@
 #import "AppDelegate.h"
 
 #import "SimpleAudioEngine.h"
+#import "LevelScene.h"
 
 #pragma mark - HelloWorldLayer
 
@@ -85,8 +86,7 @@
     CCMenuItem *item = (CCMenuItem *)sender;
     NSInteger tag = item.tag;
     NSString *classStr = [NSString stringWithFormat:@"Level%dLayer", tag];
-    CCScene *scene = [[NSClassFromString(classStr) class] scene];
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInR transitionWithDuration:0.5f scene:scene]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionSlideInR transitionWithDuration:0.5f scene:[LevelScene scene:classStr]]];
 }
 
 @end

@@ -11,18 +11,14 @@
 
 @implementation Level3Layer
 
-@synthesize level = _level;
-
-+ (CCScene *)scene {
-    CCScene *scene = [CCScene node];
-    Level3Layer *layer = [Level3Layer node];
-    [scene addChild:layer];
-    return scene;
-}
-
 - (id)init {
     if ((self = [super init])) {
-        _level = 3;
+        self.level = 3;
+        _enemyCount = 15;
+        
+        [self createTieldMap];
+        
+        [self createStausBar:90 score:0];
     }
     return self;
 }

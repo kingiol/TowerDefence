@@ -38,7 +38,8 @@
     if ((self = [super init])) {
         self.damageRange = RANDOM_INT_INCLUDE(1, 3);
         self.fireRate = RANDOM_INT_INCLUDE(70, 90);
-        self.fireInterval = RANDOM_INT_INCLUDE(1, 2);
+//        self.fireInterval = RANDOM_INT_INCLUDE(1, 2);
+        self.fireInterval = 1 + RANDOM_INT(1);
         self.bulletSpeed = RANDOM_INT_INCLUDE(50, 60);
         self.isAttacking = NO;
         self.choosedEnemy = nil;

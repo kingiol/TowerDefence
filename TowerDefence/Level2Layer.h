@@ -7,14 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "cocos2d.h"
 
-@interface Level2Layer : CCLayer {
+#import "LevelLayer.h"
+
+@interface Level2Layer : LevelLayer {
     
 }
-
-@property (nonatomic, unsafe_unretained) int level;
-
-+ (CCScene *)scene;
 
 @end

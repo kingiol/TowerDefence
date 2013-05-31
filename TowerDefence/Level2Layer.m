@@ -11,18 +11,14 @@
 
 @implementation Level2Layer
 
-@synthesize level = _level;
-
-+ (CCScene *)scene {
-    CCScene *scene = [CCScene node];
-    Level2Layer *layer = [Level2Layer node];
-    [scene addChild:layer];
-    return scene;
-}
-
 - (id)init {
     if ((self = [super init])) {
-        _level = 2;
+        self.level = 2;
+        _enemyCount = 10;
+        
+        [self createTieldMap];
+        
+        [self createStausBar:60 score:0];
     }
     return self;
 }

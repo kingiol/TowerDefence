@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="15" height="10" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="TileLayer_background" tilewidth="32" tileheight="32">
+  <image source="TileLayer_background.png" width="1024" height="1024"/>
+ </tileset>
+ <layer name="Background" width="15" height="10">
+  <data encoding="base64" compression="zlib">
+   eJyVUdsJACEMq6OY0br/EN6BhZhLhfsIvkjzEBGBB2Nj0n7Im969a/4Ez8lGB8ZH7nsYbqeFC9flcr6YW3nLGwwyzm46z4hvbp7tuK7L2ehqj6qjeXUu+3Pd6X/VufQWFKQXSw==
+  </data>
+ </layer>
+ <objectgroup name="MountainObject" width="15" height="10">
+  <object name="Mountain" x="96" y="96" width="32" height="32"/>
+ </objectgroup>
+ <layer name="Meta" width="15" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYGRAAGQ2Nj6yGCMZGJfZ6GxsapHFiXUDLr3Y/IXPLYTMJSSHy7+4/E2MXYT8RshuXH5Edx8++3DZAwBssABd
+  </data>
+ </layer>
+</map>

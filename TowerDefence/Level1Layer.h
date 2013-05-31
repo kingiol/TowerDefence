@@ -7,17 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LevelLayerDelegate.h"
 
-@interface Level1Layer : CCLayer <LevelLayerDelegate> {
+#import "LevelLayer.h"
+
+@interface Level1Layer : LevelLayer {
     
 }
-
-@property (nonatomic, unsafe_unretained) int level;
-@property (nonatomic, strong) CCTMXTiledMap *tmxTiledMap;
-
-@property (nonatomic, strong) NSMutableArray *enemiesArray;
-
-+ (CCScene *)scene;
 
 @end
